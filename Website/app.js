@@ -1,4 +1,4 @@
-const postData = async (url='', data= {})=> {
+const postData = async function(url='', data= {}) {
     console.log(data);
     const response = await fetch(url, {
         method : 'POST',
