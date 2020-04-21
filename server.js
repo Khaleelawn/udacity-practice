@@ -27,8 +27,7 @@ app.get('/index.html',function(req, res) {
 // create post request
 const data = [];
 app.post('/add',function (req, res) {
-    data.push(req.body);
-    console.log(req.body);
+    res.send('POST Received');
 });
 
 
