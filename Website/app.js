@@ -10,7 +10,7 @@ const postData = async function(url='', data= {}) {
     });
 
     try {
-        const newData = await response.json();
+        const newData = await response.JSON();
         console.log(newData);
         return newData;
       }catch(error) {
