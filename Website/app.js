@@ -1,5 +1,5 @@
 const postData = async function(url='', data= {}) {
-    console.log(data);
+    console.log('Data '+data);
     const response = await fetch(url, {
         method : 'POST',
         credentials : 'same-origin',
@@ -10,7 +10,7 @@ const postData = async function(url='', data= {}) {
     });
 
     try {
-        const newData = await response.JSON();
+        const newData = await response.json();
         console.log(newData);
         return newData;
       }catch(error) {
@@ -18,4 +18,4 @@ const postData = async function(url='', data= {}) {
       }
 }
 
-postData('/add', {'answer' : 'good'});
+postData('/add', {'answer':'good'});
