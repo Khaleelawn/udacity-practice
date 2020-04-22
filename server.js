@@ -25,8 +25,11 @@ app.get('/index.html',function(req, res) {
 });
 
 // create post request
-app.post('/add',function(req, res) {    
-    res.send({Message:'Post Received'});
+const data = [];
+app.post('/add',function (req, res) {
+   data.push(req.body);
+   console.log(req.body);
+   res.send(data);
 });
 
 
